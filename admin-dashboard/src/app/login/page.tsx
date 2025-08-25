@@ -73,7 +73,7 @@ const Login = () => {
                             <div className="flex justify-center">
                                 {/* Small screen logo */}
                                 <Image
-                                    src="/public/logo/logo-mobile.png"
+                                    src="/logo/logo-mobile.png"
                                     alt="Logo Small"
                                     width={100}
                                     height={40}
@@ -83,7 +83,7 @@ const Login = () => {
                                 />
                                 {/* Medium screen logo */}
                                 <Image
-                                    src="/public/logo/logo-tablet.png"
+                                    src="/logo/logo-tablet.png"
                                     alt="Logo Medium"
                                     width={100}
                                     height={30}
@@ -93,7 +93,7 @@ const Login = () => {
                                 />
                                 {/* Large screen logo */}
                                 <Image
-                                    src="/public/logo/logo-tablet.png"
+                                    src="/logo/logo-tablet.png"
                                     alt="Logo Large"
                                     width={100}
                                     height={40}
