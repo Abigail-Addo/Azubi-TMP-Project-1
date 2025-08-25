@@ -2,16 +2,18 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 
 export interface Learner {
+
     _id: string;
     firstName: string;
     lastName: string;
     email: string;
     role: string;
     isVerified: boolean;
+    verificationToken: string;
+    verificationTokenExpiresAt: string;
     lastLogin: string;
     createdAt: string;
     updatedAt: string;
-    __v: number;
     contact: string;
     description: string;
     disabled: boolean;
