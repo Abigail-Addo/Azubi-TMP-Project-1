@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-// ==== Types ====
 interface Learner {
     _id: string;
     firstName: string;
@@ -80,7 +79,9 @@ export const createInvoice = createAsyncThunk(
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(invoiceData),
             });
+            console.log(response)
             const result = await response.json();
+            console.log(result)
             if (!response.ok) return thunkAPI.rejectWithValue(result.message);
             return result;
         } catch (error) {

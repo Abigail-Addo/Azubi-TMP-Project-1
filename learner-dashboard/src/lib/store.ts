@@ -1,10 +1,15 @@
 import type { Action, ThunkAction } from "@reduxjs/toolkit";
 import { combineSlices, configureStore } from "@reduxjs/toolkit";
 import { learnerAuthSlice } from "./features/learnerAuth/learnerAuthSlice";
-
+import { trackSlice } from "./features/tracks/trackSlice";
+import { enrollmentSlice } from "./features/trackEnrollment/trackEnrollmentSlice";
 // `combineSlices` automatically combines the reducers using
 // their `reducerPath`s, therefore we no longer need to call `combineReducers`.
-const rootReducer = combineSlices(learnerAuthSlice);
+const rootReducer = combineSlices(
+  learnerAuthSlice,
+  trackSlice,
+  enrollmentSlice
+);
 // Infer the `RootState` type from the root reducer
 export type RootState = ReturnType<typeof rootReducer>;
 
