@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
           },
           body: JSON.stringify(adminData),
         });
-
+        console.log(response);
         const data = await response.json();
 
         (await cookies()).set("token", data.token, {
