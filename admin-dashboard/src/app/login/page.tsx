@@ -79,7 +79,6 @@ const Login = () => {
                                     height={40}
                                     className="block md:hidden w-auto h-auto"
                                     priority
-                                    unoptimized
                                 />
                                 {/* Medium screen logo */}
                                 <Image
@@ -89,17 +88,15 @@ const Login = () => {
                                     height={30}
                                     className="hidden md:block lg:hidden w-auto h-auto"
                                     priority
-                                    unoptimized
                                 />
                                 {/* Large screen logo */}
                                 <Image
-                                    src="/logo/logo-tablet.png"
+                                    src="/logo/logo-desktop.png"
                                     alt="Logo Large"
                                     width={100}
                                     height={40}
                                     className="hidden lg:block w-auto h-auto"
                                     priority
-                                    unoptimized
                                 />
                             </div>
 

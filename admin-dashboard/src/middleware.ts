@@ -13,8 +13,13 @@ const publicPages = [
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  // Skip Next.js internal paths
-  if (pathname.startsWith("/_next") || pathname.startsWith("/favicon.ico")) {
+  // Skip Next.js internal paths and public assets
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/favicon.ico") ||
+    pathname.startsWith("/assets") ||
+    pathname.startsWith("/logo")
+  ) {
     return NextResponse.next();
   }
 
@@ -34,8 +39,3 @@ export function middleware(req: NextRequest) {
 
   return NextResponse.next();
 }
-
-// Apply to all paths
-export const config = {
-  matcher: ["/((?!_next|favicon.ico).*)"], // Protect all pages except Next.js internals
-};
