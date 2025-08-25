@@ -56,6 +56,7 @@ const Login = () => {
                         fill
                         className="object-cover w-full h-full"
                         priority
+                        unoptimized
                     />
                     <div className="absolute inset-0 bg-[#D9D9D9] opacity-30" />
                 </div>
@@ -78,6 +79,7 @@ const Login = () => {
                                     height={40}
                                     className="block md:hidden w-auto h-auto"
                                     priority
+                                    unoptimized
                                 />
                                 {/* Medium screen logo */}
                                 <Image
@@ -87,6 +89,7 @@ const Login = () => {
                                     height={30}
                                     className="hidden md:block lg:hidden w-auto h-auto"
                                     priority
+                                    unoptimized
                                 />
                                 {/* Large screen logo */}
                                 <Image
@@ -96,6 +99,7 @@ const Login = () => {
                                     height={40}
                                     className="hidden lg:block w-auto h-auto"
                                     priority
+                                    unoptimized
                                 />
                             </div>
 
