@@ -19,7 +19,7 @@ interface TracksModalProps {
 }
 
 interface IFormInput {
-    id: string | number;
+    id: string;
     name: string;
     price: number;
     instructor: string;
