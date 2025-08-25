@@ -56,7 +56,7 @@ const Login = () => {
                         fill
                         className="object-cover w-full h-full"
                         priority
-                        unoptimized
+
                     />
                     <div className="absolute inset-0 bg-[#D9D9D9] opacity-30" />
                 </div>
