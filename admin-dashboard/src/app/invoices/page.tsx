@@ -45,7 +45,7 @@ type Invoice = {
         disabled: boolean;
         location: string;
         profileImage: string;
-    };
+    } | string;
     amount: number;
     status: string;
     dueDate: string;
@@ -154,7 +154,14 @@ const Invoices = () => {
                 headerName: "Learner",
                 flex: 1,
                 renderCell: (params) => {
-                    const { learner } = params.row;
+                    const learner = params.row.learner;
+
+                    if (typeof learner === "string") {
+                        // Just show the string
+                        return <span>{learner}</span>;
+                    }
+
+                    // It's a Learner object
                     return (
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-full overflow-hidden">
@@ -169,14 +176,25 @@ const Invoices = () => {
                             <span>{learner.firstName} {learner.lastName}</span>
                         </div>
                     );
-                },
+                }
+
             },
             {
                 field: "email",
                 headerName: "Email",
                 type: "string",
                 flex: 1,
-                renderCell: (params) => <p>{params.row.learner.email}</p>,
+                renderCell: (params) => {
+                    const learner = params.row.learner;
+
+                    if (typeof learner === "string") {
+                        // If learner is a string, show it as email
+                        return <span>{learner}</span>;
+                    }
+
+                    // If it's a Learner object, show the email
+                    return <span>{learner.email}</span>;
+                },
             },
             {
                 field: "createdAt",

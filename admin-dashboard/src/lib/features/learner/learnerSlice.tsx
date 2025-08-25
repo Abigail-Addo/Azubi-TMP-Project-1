@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 
 export interface Learner {
-
     _id: string;
     firstName: string;
     lastName: string;

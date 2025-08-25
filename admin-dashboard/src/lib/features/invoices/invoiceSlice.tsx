@@ -35,7 +35,7 @@ interface Track {
 
 export interface Invoice {
     _id: string;
-    learner: Learner;
+    learner: Learner | string;
     track: Track;
     amount: number;
     status: string;
