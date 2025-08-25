@@ -51,7 +51,7 @@ const Login = () => {
                 {/* hero image */}
                 <div className="absolute inset-0 -z-10 hidden lg:flex">
                     <Image
-                        src="/public/assets/hero.png"
+                        src="admin-dashboard/public/assets/hero.png"
                         alt="hero"
                         fill
                         className="object-cover w-full h-full"
