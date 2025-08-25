@@ -78,6 +78,7 @@ export const login = createAsyncThunk(
       if (response.status !== 200 && response.status !== 201) {
         return thunkAPI.rejectWithValue(data.message);
       }
+      console.log(data)
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);

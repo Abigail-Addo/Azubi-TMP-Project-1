@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
           secure: process.env.NODE_ENV === "production",
           path: "/",
         });
-
+        console.log(data);
         return NextResponse.json(data, { status: response.status });
       } catch (error) {
         return NextResponse.json({ message: error }, { status: 500 });
