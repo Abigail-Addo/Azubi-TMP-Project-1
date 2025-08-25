@@ -7,6 +7,8 @@ interface Learner {
     email: string;
     role: string;
     isVerified: boolean;
+    verificationToken: string;
+    verificationTokenExpiresAt: string;
     lastLogin: string;
     createdAt: string;
     updatedAt: string;
@@ -42,7 +44,10 @@ export interface Invoice {
     createdAt: string;
     updatedAt: string;
     paidAt: string;
+    paymentDetails: string;
+    paystackCallbackUrl?: string;
     paystackTransactionId: string;
+    paymentLink: string;
 }
 
 interface InvoiceSliceState {

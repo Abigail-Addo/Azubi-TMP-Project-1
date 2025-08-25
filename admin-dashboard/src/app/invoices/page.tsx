@@ -58,7 +58,7 @@ type Invoice = {
 type Row = Invoice;
 
 const Invoices = () => {
-    const { invoice, fetchAllLoading, } = useAppSelector((state) => state.invoice)
+    const { invoices, fetchAllLoading, } = useAppSelector((state) => state.invoice)
     const dispatch = useAppDispatch();
 
     const [modalMode, setModalMode] = React.useState<"create" | "edit">("create");
@@ -390,7 +390,7 @@ const Invoices = () => {
                         }}
                     >
                         <DataGrid
-                            rows={invoice}
+                            rows={invoices}
                             columns={columns}
                             getRowId={(row) => row._id}
                             loading={fetchAllLoading}
